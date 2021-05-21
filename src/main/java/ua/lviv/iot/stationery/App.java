@@ -10,21 +10,22 @@ import ua.lviv.iot.stationery.models.ArtItem;
 import ua.lviv.iot.stationery.models.MechItem;
 import ua.lviv.iot.stationery.models.WritingItem;
 
+
 public final class App {
     private App() { }
     public static void main(final String[] args) {
         StoreItemManager itemManager = new StoreItemManager();
-        itemManager.addItem(new WritingItem("Vector", 12.5f, 15.5f, 5.0f,
+        itemManager.addItem(new WritingItem("Vector", 12.5, 15.5, 5.0,
                 CustomerType.HIGHSCHOOL, "standard", WritingAids.PEN));
-        itemManager.addItem(new WritingItem("MARK", 15.5f, 5.5f, 4.1f,
+        itemManager.addItem(new WritingItem("MARK", 15.5, 5.5, 4.1,
                 CustomerType.HIGHSCHOOL, "none", WritingAids.PENCIL));
-        itemManager.addItem(new ArtItem("Dream-pencil", 15.2f, 7.0f, 5.0f,
+        itemManager.addItem(new ArtItem("Dream-pencil", 15.2, 7.0, 5.0,
                 CustomerType.JUNIOR, "red", DrawingTools.COLORPENCIL));
-        itemManager.addItem(new ArtItem("Cloud-brush", 50.0f, 20.0f, 5.0f,
+        itemManager.addItem(new ArtItem("Cloud-brush", 50.0, 20.0, 5.0,
                 CustomerType.JUNIOR, "blue", DrawingTools.BRUSH));
-        itemManager.addItem(new MechItem("GOLD", 300.0f, 100.0f, 5.0f,
+        itemManager.addItem(new MechItem("GOLD", 300.0, 100.0, 5.0,
                 CustomerType.STUDENT, "steel", MechanizationTools.STAPLER));
-        itemManager.addItem(new MechItem("Holer", 250.0f, 75.0f, 3.7f,
+        itemManager.addItem(new MechItem("Holer", 250.0, 75.0, 3.7,
                 CustomerType.STUDENT, "plastic", MechanizationTools.HOLEPUNCH));
 
         System.out.println("Sort by price: ");

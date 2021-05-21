@@ -16,8 +16,8 @@ public class MechItem extends Item {
     private String material;
     private MechanizationTools mechItemType;
 
-    public MechItem(final String name, final float weight, final float price,
-                    final float rating, final CustomerType customerType,
+    public MechItem(final String name, final double weight, final double price,
+                    final double rating, final CustomerType customerType,
                     final String thisMaterial, final MechanizationTools thisMechItemType) {
         super(name, weight, price, rating, customerType);
         this.material = thisMaterial;
