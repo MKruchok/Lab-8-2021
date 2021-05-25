@@ -1,14 +1,22 @@
 package ua.lviv.iot.stationery.models;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import ua.lviv.iot.stationery.enums.CustomerType;
 
+import javax.persistence.GeneratedValue;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.persistence.GenerationType;
+
 @Data
+@Entity
 @NoArgsConstructor
-@AllArgsConstructor
+@Table(name = "items")
 public class Item {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String name;
     private double weight;
